@@ -1,8 +1,13 @@
-def product():
-    """ TODO: Takes three inputs (or two) and return"""
+def product(x, y, z=1):
+    return x * y * z
 
-# TODO: product(1, 1, 1)	# 1
-# TODO: product(1, 2, 3)	# 6
-# TODO: product(2, 5, 10)	# 100
-# TODO: product(3, 3)	    # 9
-# TODO: product(2, 5)	    # 12
+num1 = product(1, 1, 1)
+print(num1)
+num2 = product(1, 2, 3)
+print(num2)
+num3 = product(2, 5, 10)
+print(num3)
+num4 = product(3, 3)
+print(num4)
+num5 = product(2, 5)
+print(num5)

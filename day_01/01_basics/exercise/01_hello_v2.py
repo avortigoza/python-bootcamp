@@ -1,4 +1,10 @@
-# TODO: Print the following in the console:
-# Use variables for the name and programming language
-# Hello! My name is Jeff
-# I am learning Python
+# Print 2
+
+name ="Areanne"
+language = "Python"
+
+print("Hello! My name is", name)
+print("I am learning", language)
+
+print()
+print(f"Hello! My name is {name}. \nI am learning {language}.")

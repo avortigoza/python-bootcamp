@@ -1,6 +1,10 @@
-def product():
-    """TODO: Takes three inputs and print the product"""
+input1 = int(input("Enter the first number: "))
+input2 = int(input("Enter the second number: "))
+input3 = int(input("Enter the third number: "))
 
-# TODO: product(1, 1, 1)	# 1
-# TODO: product(1, 2, 3)	# 6
-# TODO: product(2, 5, 10)	# 100
+def product(x, y, z):
+    print()
+    print(f"The product is {x * y * z}.")
+product(input1, input2, input3)
+
+
