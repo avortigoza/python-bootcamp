@@ -2,10 +2,14 @@ orders = {}
 
 order = input("Enter order: ")
 while order:
-    count = int(input("Enter how many: "))
-    order = input("Enter order: ")
+    count = int(input("Enter how many: ")) # Key
 
-    # TODO: Record the person’s order
-    # TODO: If the order already exist, just add the count
+    if order in orders:
+        orders[order] += count # orders[order] = orders[order] + count
+    else:
+        orders[order] = count
+    order = input("Enter order: ") # Value
 
 print(orders)
+
+

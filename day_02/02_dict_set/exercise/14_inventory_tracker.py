@@ -1,25 +1,38 @@
 def add(inventory):
-    """TODO:
-        Ask for item name, info, and stock
-        Create a dictionary with key: name, info, stock
-        Add that dictionary to inventory
-    """
+    name = input("Enter the item name: ")
+    info = input("Enter the item info: ")
+    stock = input("Enter the item quantity: ")
+
+    new_item = {
+        "name": name,
+        "info": info,
+        "stock": stock
+    }
+
+    inventory.append(new_item)
+        # Ask for item name, info, and stock
+
+        # Create a dictionary with key: name, info, stock
+        # Add that dictionary to inventory
 
 
 def remove(inventory):
-    """TODO:
-        Ask for item index (int)
-        Remove item in that index in inventory
-    """
+    index = int(input("Enter item index: "))
+    inventory.pop(index)
 
 
 def read(inventory):
-    """TODO:
-        Ask for item index (int)
-                Show item in that index in inventory
-    """
+    index = int(input("Enter item index: "))
+    print(inventory[index])
+
+
 def show(inventory):
-    """TODO: Print items line-by-line"""
+    for print_details in inventory:
+        print("Order: ")
+
+        for key, value in print_details.items():
+            print(f"\t {key}: {value}")
+
 
 def main():
     """Created to test functions"""
@@ -30,17 +43,13 @@ def main():
     while running:
         command = input("Command: ")
         if command == "add":
-            # TODO: Use add command"""
-            pass
+            add(inventory)
         elif command == "remove":
-            #  TODO: Use remove command"""
-            pass
+            remove(inventory)
         elif command == "read":
-            # TODO: Use read command"""
-            pass
+            read(inventory)
         elif command == "show":
-            # TODO: Use show command"""
-            pass
+            show(inventory)
         elif command == "exit":
             running = False
 

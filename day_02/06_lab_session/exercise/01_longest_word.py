@@ -1,6 +1,12 @@
 def get_longest_word(text):
-    """TODO: Add decoding process"""
-    longest_word = None
+    words = text.split
+
+    longest_word = ""
+
+    for word in words():
+        if len(longest_word) < len(word):
+            longest_word = word
+
     return longest_word
 
 

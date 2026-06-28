@@ -2,13 +2,17 @@ invited = {"Ana", "Ben", "Carlo", "Dani"}
 attended = {"Ben", "Carlo", "Ely"}
 
 # TODO: Who are all the involved members?
-print("Involved Members:")
+involved = invited | attended
+print(f"Involved Members: {involved}.")
 
 # TODO: Who was absent?
-print("Absent:")
+absent = invited - attended
+print(f"Absent: {absent}.")
 
 # TODO: Who gatecrashed?
-print("Not enrolled but attended:")
+gatecrashed = attended - invited
+print(f"Not enrolled but attended: {gatecrashed}.")
 
 # TODO: Who was invited and attended
-print("Attended properly:")
+proper = invited & attended
+print(f"Attended properly: {proper}.")

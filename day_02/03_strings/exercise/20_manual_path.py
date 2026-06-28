@@ -7,5 +7,6 @@ folders = [
 
 # TODO: Create a proper filepath to the given file
 # python_bootcamp/day_02/03_strings/manual_path.py
-path = 'Hello'
-print(path)
+
+file_path = "/".join(folders)
+print(file_path)
