@@ -1,31 +1,27 @@
 def add(song, playlist):
-
-    new_song = {
-        "title": title,
-        "singer": singer,
-    }
-
-    playlist.append(new_song)
+    playlist.append(song)
 
 def remove(song, playlist):
-    index = int(input("Enter song index: "))
-    playlist.pop(index)
+    if song in playlist:
+        playlist.remove(song)
+    else:
+        print("Song not in playlist.")
 
 def play(playlist):
-    """TODO: Print the first song in the playlist (if any) and remove"""
-    index = int(input("Enter song index: "))
-    print(inventory[index]) and playlist.pop(index)
+    if playlist:
+        song = playlist.pop(0)
+        print(f"Now playing: {song}.")
+    else:
+        print("No song in playlist.")
 
 def show_all(playlist):
-    for print_details in playlist:
-        print("Song: ")
-
-        for key, value in print_details.items():
-            print(f"\t {key}: {value}")
+    for index, song in enumerate(playlist, 1):
+        print(f"{index}. {song}")
 
 # def save(playlist, filepath):
 #     """Challenge: TODO: Save current playlist to filepath"""
-#
+
+
 # def load(filepath):
 #     """Challenge: TODO: Load a new playlist from filepath and return it"""
 
@@ -35,17 +31,26 @@ def playlist_app():
         then do the task requested
     """
     playlist = []
-    end = False
+    ask = True
 
-    while not end:
+    while ask:
         user_choice = input("Select command: ")
 
         # Ask all inputs in the playlist_app() function to make functions simple
         if user_choice == "add":
-            title = input("Enter song name: ")
-            singer = input("Enter singer: ")
+            new_song = input("Enter song name: ")
             add(new_song, playlist)
+        if user_choice == "remove":
+            song = input("Enter song name: ")
+            remove(song, playlist)
+        if user_choice == "show":
+            show_all(playlist)
+        if user_choice == "play":
+            play(playlist)
         if user_choice == "exit":
-            end = True
+            print("Exiting the app...")
+            ask = False
+        else:
+            print("Enter a valid command.")
 
 playlist_app()
